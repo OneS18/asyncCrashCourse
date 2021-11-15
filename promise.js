@@ -33,13 +33,13 @@ function createPost(post) {
 //   .catch((err) => console.log(err));
 
 //Async / Await
-// async function init() {
-//   await createPost({ title: "Post three", body: "this is post three" });
+async function init() {
+  await createPost({ title: "Post three", body: "this is post three" });
 
-//   getPosts();
-// }
+  getPosts();
+}
 
-// init();
+init();
 
 //Async / Await / Fetch
 async function fetchUsers() {
@@ -47,22 +47,22 @@ async function fetchUsers() {
 
   const data = await res.json();
   console.log(data);
- }
+}
 
 fetchUsers();
 
 //Promise.all
-// const promise1 = Promise.resolve("Hello There");
-// const promise2 = 10;
-// const promise3 = new Promise((resolve, reject) => {
-//   setTimeout(resolve, 2000, "Goodbye");
-// });
-// const promise4 = fetch("https://jsonplaceholder.typicode.com/users").then(
-//   (res) => {
-//     res.json();
-//   }
-// );
+const promise1 = Promise.resolve("Hello There");
+const promise2 = 10;
+const promise3 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 2000, "Goodbye");
+});
+const promise4 = fetch("https://jsonplaceholder.typicode.com/users").then(
+  (res) => {
+    res.json();
+  }
+);
 
-// Promise.all([promise1, promise2, promise3, promise4]).then((values) =>
-//   console.log(values)
-// );
+Promise.all([promise1, promise2, promise3, promise4]).then((values) =>
+  console.log(values)
+);
